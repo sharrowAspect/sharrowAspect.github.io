@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 1%;   /* also good practice, removes default body margin */
+}
+
+.header-box {
+  width: 50%;
+  height: 30%;   /* now this will actually work, since body has a real height */
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+
+
+.rotated-image {
+  max-width: 100%;
+  height: auto;
+  transform: scale(1);
+  position: absolute;
+  top: -20%;
+  left: 25%;
+  z-index: -1;
+}
+
+.grhg_logo {
+  width: 50%;
+  height: auto;
+  position: relative;
+  /* left: 0%;
+  top: -0%; */
+}
+
+.grhg_bold_logo {
+  width: 50%;
+  height: auto;
+  position: relative;
+  /* left: 0%;
+  top: -0%; */
+}
+
+.header-box {
+  position: relative;
+  width: 45%;            /* width of the box */
+  height: 90%;            /* height of the box */
+  border: 2px solid black;  /* the visible outline */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
