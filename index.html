@@ -10,26 +10,54 @@
 
 <body>
   <header class="header-box">
+  <!-- Option for multiple logos vs 1  -->
+   
+  <!-- <div class="logo-row">
     <img src="images/grhg.svg" alt="grhg_logo" class="grhg_logo">
     <img src="images/grhg_bold.svg" alt="grhg_logo" class="grhg_bold_logo">
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </div> -->
+  <img src="images/grhg.svg" alt="grhg_logo" class="grhg_logo">
+  <!-- <img src="images/grhg_bold.svg" alt="grhg_logo" class="grhg_bold_logo"> -->
+  
+
+  <div class="hand-sprite">
+    <span class="hotspot hotspot-1"></span>
+    <span class="hotspot hotspot-2"></span>
+    <span class="hotspot hotspot-3"></span>
+    <span class="hotspot hotspot-4"></span>
+    <img src="images/svg/finger0-web.svg" alt="hand" class="hand-base">
+    <img src="images/svg/finger1-web.svg" alt="finger 1 highlighted" class="hand-overlay hand-f1">
+    <img src="images/svg/finger2-web.svg" alt="finger 2 highlighted" class="hand-overlay hand-f2">
+    <img src="images/svg/finger3-web.svg" alt="finger 3 highlighted" class="hand-overlay hand-f3">
+    <img src="images/svg/finger4-web.svg" alt="finger 4 highlighted" class="hand-overlay hand-f4">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 
   <main>
     <img src="images/rug_2nd_image.png" alt="Description of image" class="rotated-image"> <!-- image size is 13042 x 3678 -->
     <h1>name</h1>
     <p>HI!!!</p>
-  </main>
   
-   
+  </main>
+
+  <script>
+    if (new URLSearchParams(location.search).has('dev')) {
+      const s = document.createElement('script');
+      s.src = 'dev-tools.js';
+      document.body.appendChild(s);
+    }
+  </script>
 
 
 </body>
-<
+
+<!-- 265.295 -->
