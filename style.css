@@ -72,11 +72,11 @@ html, body {
 
 .hotspot {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   /* placeholder positions — nudge these once you can see the hand rendered */
 }
 
-.hotspot-1 { top: 36.57%; left: 40.51%; width: 30.5%; height: 14.94%; }
+/* .hotspot-1 { top: 36.57%; left: 40.51%; width: 30.5%; height: 14.94%; }
 .hotspot-2 { top: 50.81%; left: 40.35%; width: 33.63%; height: 17.87%; }
 .hotspot-3 { top: 67.38%; left: 41.78%; width: 28%; height: 15.04%; }
 .hotspot-4 { top: 82.14%; left: 42.05%; width: 20.96%; height: 14.44%; }
@@ -85,4 +85,127 @@ html, body {
 .hotspot-1:hover ~ .hand-f1,
 .hotspot-2:hover ~ .hand-f2,
 .hotspot-3:hover ~ .hand-f3,
-.hotspot-4:hover ~ .hand-f4 { opacity: 1; }
+.hotspot-4:hover ~ .hand-f4 { opacity: 1; } */
+
+
+.hotspot-5 { top: 61.37%; left: 23.97%; width: 5.00%; height: 10.44%; }
+
+.word-the-world {
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+  top: 62.2%;
+  left: 18.27%; 
+  width: 20.00%; 
+  height: 15.44%;
+  /* border: 2px solid red; */
+}
+
+.hotspot-5:hover ~ .hand-base {
+  opacity: 0;
+}
+.hotspot-5:hover ~ .hand-overlay {
+  opacity: 0;
+}
+.hotspot-5:hover ~ .word-label {
+  opacity: 0;
+}
+.hotspot-5:hover ~ .hand-f5 {
+  opacity: 1;
+}
+
+.hotspot-5:hover ~ .word-the-world {
+  opacity: 1;
+  transition: opacity ease 2s;
+}
+
+.hand-sprite:has(.hand-btn-projects:hover) .hand-base,
+.hand-sprite:has(.hand-btn-random:hover) .hand-base,
+.hand-sprite:has(.hand-btn-about:hover) .hand-base,
+.hand-sprite:has(.hand-btn-contact:hover) .hand-base {
+  opacity: 0;
+}
+
+
+.hand-sprite:has(.hand-btn-projects:hover) .hand-f1 { opacity: 1; }
+.hand-sprite:has(.hand-btn-random:hover)   .hand-f2 { opacity: 1; }
+.hand-sprite:has(.hand-btn-about:hover)    .hand-f3 { opacity: 1; }
+.hand-sprite:has(.hand-btn-contact:hover)  .hand-f4 { opacity: 1; }
+
+/* Removes all Labels when hovering */
+.hand-sprite:has(.hand-btn:hover) .word-label {
+  opacity: 0;
+}
+/* bring back the one actually being hovered */
+/* .hand-sprite:has(.hand-btn-projects:hover) .word-projects,
+.hand-sprite:has(.hand-btn-random:hover)   .word-random,
+.hand-sprite:has(.hand-btn-about:hover)    .word-about,
+.hand-sprite:has(.hand-btn-contact:hover)  .word-contact {
+  opacity: 1;
+} */
+
+.hand-sprite:has(.hand-btn-projects:hover) .finger1,
+.hand-sprite:has(.hand-btn-random:hover)   .finger2,
+.hand-sprite:has(.hand-btn-about:hover)    .finger3,
+.hand-sprite:has(.hand-btn-contact:hover)  .finger4 {
+  opacity: 1;
+  transition: opacity ease 0.15s;
+}
+
+
+/* ==================================== */
+/* ====BUTTONS========================= */
+
+.word-label {
+  position: absolute;
+  height: auto;
+  width: auto;
+  pointer-events: none; /* clicks pass through to the button below */
+  z-index: 2;
+}
+
+.word-detail {
+  position: absolute;
+  height: auto;
+  width: auto;
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Start these at the same coordinates as your existing hotspots,
+   then nudge each to sit next to/over its matching finger */
+.word-projects { top: 39.52%; left: 44.80%; width: 16.00%; }
+.hand-btn-projects { top: 36.57%; left: 40.51%; width: 30.5%; height: 14.94%; }
+.detail-projects { top: 39.71%; left: 40.69%; width: 24.00%; }
+
+.word-random { top: 54.88%; left: 50.33%; width: 15.00%; }
+.hand-btn-random { top: 50.81%; left: 40.35%; width: 33.63%; height: 17.87%; }
+.detail-random { top: 54.21%; left: 46.14%; width: 22.03%; }
+
+.word-about { top: 72.56%; left: 48.47%; width: 15.00%; }
+.hand-btn-about { top: 67.38%; left: 41.78%; width: 28%; height: 15.04%; }
+.detail-about { top: 72.22%; left: 46.18%; width: 19.02%; }
+
+.word-contact { top: 87.13%; left: 43.36%; width: 11.00%; }
+.hand-btn-contact { top: 82.14%; left: 42.05%; width: 20.96%; height: 14.44%; }
+.detail-contact { top: 86.06%; left: 40.39%; width: 16.47%; }
+
+.hand-btn {
+  position: absolute;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  /* outline: 1px solid red; */
+  cursor: pointer;
+  z-index: 3; /* above the word-label images */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hand-btn:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+/* match size/position to each word-label above (copy those values,
+   then adjust width/height to fully cover the visible svg text) */
