@@ -1,0 +1,27 @@
+html, body {
+  height: 100%;
+  /* margin: 1%; */
+  overflow: hidden;
+}
+
+.bg {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+  height: 105%;           /* or whatever height you want the container to be */
+  width: 100%;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+
+.projects_rug_bg {
+  max-width: 60%;
+  width: 800px;
+  height: auto;
+  /* transform: scale(0.8); */
+  position: absolute;
+  top: -0%;
+  z-index: -1;
+}
+

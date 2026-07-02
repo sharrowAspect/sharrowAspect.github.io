@@ -149,7 +149,7 @@ html, body {
 .hand-sprite:has(.hand-btn-about:hover)    .finger3,
 .hand-sprite:has(.hand-btn-contact:hover)  .finger4 {
   opacity: 1;
-  transition: opacity ease 0.15s;
+  /* transition: opacity ease 0.15s; */
 }
 
 
