@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rug Unroll Demo</title>
+</head>
+<body>
+
+  <div class="bg">
+    <div class="rug-wrap" id="rugWrap">
+      <!-- swap this src back to images/rug_projects.png on your real page -->
+      <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=60"
+           alt="rug-projects-bg" class="projects_rug_bg" id="rugImg">
+      <div class="roll" id="roll"></div>
+      <div class="drop-shadow" id="dropShadow"></div>
+    </div>
+  </div>
+
+<script>
+  const wrap = document.getElementById('rugWrap');
+  const roll = document.getElementById('roll');
+  const shadow = document.getElementById('dropShadow');
+
+  const duration = 2200; // ms — tweak for speed
+  const startDelay = 300;
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function playUnroll() {
+    roll.style.opacity = 1;
+    shadow.style.opacity = 1;
+
+    const start = performance.now() + startDelay;
+
+    function frame(now) {
+      const elapsed = now - start;
+      if (elapsed < 0) {
+        requestAnimationFrame(frame);
+        return;
+      }
+      const rawT = Math.min(elapsed / duration, 1);
+      const t = easeOutCubic(rawT);
+
+      // reveal the image from top to bottom
+      wrap.style.clipPath = `inset(0 0 ${(1 - t) * 100}% 0)`;
+
+      // move the roll + shadow to sit exactly at the reveal edge
+      roll.style.top = `${t * 100}%`;
+      shadow.style.top = `${t * 100}%`;
+
+      if (rawT < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        // roll disappears once the rug is fully laid out
+        roll.style.transition = 'opacity 0.4s ease';
+        shadow.style.transition = 'opacity 0.4s ease';
+        roll.style.opacity = 0;
+        shadow.style.opacity = 0;
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+
+  window.addEventListener('load', playUnroll);
+  // click to replay, handy while you're tuning it
+  wrap.addEventListener('click', () => {
+    wrap.style.clipPath = 'inset(0 0 100% 0)';
+    playUnroll();
+  });
+</script>
+
+</body>
+</html>

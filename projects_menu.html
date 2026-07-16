@@ -2,15 +2,285 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work</title>
   <link rel="stylesheet" href="style-projects.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player@latest" type="module"></script>
 </head>
 
 
-
 <body>
-    <div class = "bg">
-        <img src = "images/rug_projects.png" alt = "rug-projects-bg" class = "projects_rug_bg">
-    </div>
-</body>
 
+  <span class="theme-toggle" onclick="document.body.classList.toggle('dark')">Theme</span>
+
+  <p>Studio description goes here — who you are and what you do.</p>
+  <p><a href="/">Back</a></p>
+
+
+  
+
+  <div class="work-item">
+    <p>GRIDLOCK magazine — covers, design</p>
+    <p>2026</p>
+    
+    <div class = "media">
+      <img class = "horizontal-image" src="portfolio_images/Gridlock/salt.png">
+      <img class = "horizontal-image" src = "portfolio_images/Gridlock/Rectangle 6.png">
+      <img class = "vertical-image" src="portfolio_images/Gridlock/gridlock_uncertainty.png">
+      <img class = "horizontal-image" src = "portfolio_images/Gridlock/friends_vs_enemies.png">
+    </div>
+    
+  </div>
+
+  <!-- ////////////////////// -->
+
+  <div class="work-item">
+    <p>ICRADIO — Modulate</p>
+    <p>Promotional campaign video - 2026</p>
+    <p>Videography, Editing -  Gabe Gourlay</p>
+    
+    <div class = "media">
+
+      <mux-player
+        class = "horizontal-video video" 
+        id = "PIRACY"
+        playback-id="5kSEw8sNBR1BPGicEMUT02iDxOoCZ1ovLqFMzCxwNJ3Y"
+        muted
+        autoplay
+        loop
+        playsinline
+        style="aspect-ratio:16/9;">
+      </mux-player>
+
+
+      <!-- <video class="horizontal-video video" src="portfolio_images/ICRADIO/PIRACY.mp4" muted loop playsinline></video> -->
+      <img class = "vertical-image" src = "portfolio_images/ICRADIO/20251109_143759740_iOS.jpg">
+    </div>
+    
+  </div>
+
+  <!-- ////////////////////// -->
+
+  <div class="work-item">
+    <p>ICRADIO — Green Screen event</p>
+    <p>Promotional videos - 2026</p>
+    <p> by Gabe Gourlay, JB</p>
+    
+    <div class = "media">
+      
+      <mux-player
+        class = "horizontal-video video" 
+        id = "Promo"
+        playback-id="MM318g024xyY00ayPYZZWirDFo1NvSDpchB5vd4rBAe4o"
+        muted
+        autoplay
+        loop
+        playsinline
+        style="aspect-ratio:16/9;">
+      </mux-player>
+
+      <!-- THE === GREEN === ONE -->
+      <mux-player
+        class = "vertical-video video"  
+        id = "the_greenone"
+        playback-id="rhKiz1zm8hwJuj7Xs3GU87R6XJRXAwhTtKZLa7Rfl3s"
+        muted
+        autoplay
+        loop
+        playsinline
+        style="aspect-ratio:9/16;">
+      </mux-player>
+
+      <!-- <video class="horizontal-video video" src="portfolio_images/ICRADIO/Promo.mp4" muted loop playsinline></video> -->
+      <!-- <video class = "vertical-video video" src = "portfolio_images/ICRADIO/the_greenone.mp4" muted loop playsinline></video> -->
+    </div>
+    
+  </div>
+
+
+  <!-- ///////////////////////// -->
+
+
+  <div class="work-item">
+    <p>ICRADIO</p>
+    <p>Designed custom typographies for ICRadio.</p>
+    <p>Welcome flyers and stickers.</p>
+    
+    <div class = "media">
+      <img class = "vertical-image" src="portfolio_images/ICRADIO/flyer1.png" alt = "flyer1">
+      <img class = "vertical-image" src="portfolio_images/ICRADIO/flyer2.png" alt = "flyer2">
+      <img class = "horizontal-image" src = "portfolio_images/ICRADIO/ICRADIO_flyers.jpg" alt = "flyer3">
+    </div>
+    
+  </div>
+
+  <!-- ///////////////////////// -->
+
+  <div class="work-item">
+    <p>ICRADIO</p>
+    <p>Designed custom typographies for ICRadio.</p>
+    <p>Sticker pack.</p>
+    
+    <div class = "media">
+      <mux-player
+        class = "vertical-video video"  
+        id = "hello_animation"
+        playback-id="H1cDUhslXyhg8moJYdQsaiIs02hTr02DOpZJRzAiJyU01Q"
+        muted
+        autoplay
+        loop
+        playsinline
+        style="aspect-ratio:1;">
+      </mux-player>
+
+      <!-- <video class = "vertical-video video" src = "portfolio_images/ICRADIO/hello_animation.mp4" muted loop playsinline></video> -->
+      <img src="portfolio_images/ICRADIO/sticker_head_1-no_bg.svg" width = "20%" max-width = "4 00px">
+    </div>
+    
+  </div>
+
+  <!-- ///////////////////////// -->
+
+  <div class="work-item">
+    
+    <p>2WAY speaker design — Gabe Gourlay</p>
+    <p>9"x9"x9"</p>
+    <p>CAD, KiCAD, Adobe</p>
+    <div class = "media">
+      <!-- SPEAKER VIDEO=============== -->
+      <mux-player
+        class = "vertical-video video"  
+        id = "speaker_animation"
+        playback-id="UDVJUGVXMw9Ncabljg02QsRM9LKWZeOiKOMowifq9Pq8"
+        muted
+        autoplay
+        loop
+        playsinline
+        style="aspect-ratio:3/4;">
+      </mux-player>
+      <!-- <video class="vertical-video video" src="portfolio_images/speaker/Comp 1.mp4" autoplay muted loop playsinline></video> -->
+      <img class="horizontal-image" src="portfolio_images/speaker/pcb_back.jpg" alt="pcb_back">
+      <img class="horizontal-image" src="portfolio_images/speaker/pcb_top.jpg" alt="pcb_top">
+      <img class = "vertical-image" src = "portfolio_images/speaker/speaker_internal.jpg" alt = "speaker_internal">
+      <img class = "vertical-image" src = "portfolio_images/speaker/speak_and_be_heard.png" alt = "speaker_poster">
+    </div>
+    
+    <p><a href="/work/project-slug">view</a></p>
+  </div>
+
+    <!-- ERIS VIDEO -->
+    <div class="work-item">
+    <p>Music and Video - Sharrow, SO</p>
+    <p>Video - s.video</p>
+    <p>Music - Gabe Gourlay, SO</p>
+    
+    <div class = "media">
+      <mux-player
+        class = "vertical-video video"  
+        id = "Eris"
+        playback-id="IhWQt02i00TZvoxB022gM8C9tITdO2UkCidFlhddlzeDcA"
+        muted
+        autoplay
+        loop
+        playsinline
+        style="aspect-ratio:9/16;">
+      </mux-player>
+
+      <!-- <video class = "vertical-video video" src = "portfolio_images/Gridlock/Eris Video (take 1).mov" muted loop playsinline></video> -->
+      
+    </div>
+    
+  </div>
+
+  <script>
+    document.querySelectorAll('.video').forEach(video => {
+      // wrapper for video + controls (side by side)
+      const wrapper = document.createElement('span');
+      wrapper.style.display = 'inline-flex';
+      wrapper.style.alignItems = 'flex-end'; // <-- was 'center', now bottom-aligned
+      wrapper.style.gap = '8px';
+
+      video.parentNode.insertBefore(wrapper, video);
+      wrapper.appendChild(video);
+
+      // controls stack (mute above pause)
+      const controls = document.createElement('span');
+      controls.style.display = 'flex';
+      controls.style.flexDirection = 'column';
+      controls.style.gap = '4px';
+      wrapper.appendChild(controls);
+
+      // mute/unmute toggle
+      const muteToggle = document.createElement('span');
+      muteToggle.style.textDecoration = 'underline';
+      muteToggle.style.cursor = 'pointer';
+      muteToggle.textContent = video.muted ? 'mute' : 'unmute';
+
+      muteToggle.addEventListener('click', () => {
+        video.muted = !video.muted;
+        muteToggle.textContent = video.muted ? 'unmute' : 'mute';
+      });
+
+      // pause/unpause toggle
+      const pauseToggle = document.createElement('span');
+      pauseToggle.style.textDecoration = 'underline';
+      pauseToggle.style.cursor = 'pointer';
+      pauseToggle.textContent = video.paused ? 'unpause' : 'pause';
+
+      pauseToggle.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      video.addEventListener('pause', () => pauseToggle.textContent = 'unpause');
+      video.addEventListener('play', () => pauseToggle.textContent = 'pause');
+
+      controls.appendChild(muteToggle);
+      controls.appendChild(pauseToggle);
+    });
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const player = entry.target;
+          if (entry.isIntersecting) {
+            player.play().catch(() => {}); // resume when back in view
+          } else {
+            if (!player.paused) player.pause(); // pause when off screen
+          }
+        });
+      },
+      {
+        threshold: 0,
+        rootMargin: '0px',
+      }
+    );
+
+    // observe every mux-player currently on the page
+    document.querySelectorAll('mux-player').forEach((player) => {
+      observer.observe(player);
+    });
+  </script>
+
+</body>
+</html>
+
+
+<!-- 
+<div class="work-item">
+  <p>ICRADIO — Green Screen event</p>
+  <p>Promotional video - 2026</p>
+  <p>Campaign</p>
+  <p>Short description of the project goes here.</p>
+  
+  <div class = "media">
+    
+  </div>
+    
+</div>
+   -->
